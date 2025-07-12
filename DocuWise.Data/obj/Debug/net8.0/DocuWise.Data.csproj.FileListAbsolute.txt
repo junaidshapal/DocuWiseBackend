@@ -1,0 +1,14 @@
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\bin\Debug\net8.0\DocuWise.Data.deps.json
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\bin\Debug\net8.0\DocuWise.Data.runtimeconfig.json
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\bin\Debug\net8.0\DocuWise.Data.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\bin\Debug\net8.0\DocuWise.Data.pdb
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.csproj.AssemblyReference.cache
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.AssemblyInfoInputs.cache
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.AssemblyInfo.cs
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.csproj.CoreCompileInputs.cache
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\refint\DocuWise.Data.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.pdb
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\DocuWise.Data.genruntimeconfig.cache
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.Data\obj\Debug\net8.0\ref\DocuWise.Data.dll

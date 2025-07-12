@@ -1,0 +1,30 @@
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Ignore build output
+bin/
+obj/
+out/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore packages
+packages/
+
+# Ignore IDE settings
+*.vscode/
+*.idea/
+
+# Ignore Mac and Windows junk
+.DS_Store
+Thumbs.db
+
+# Ignore publish output
+wwwroot/
+node_modules/
+dist/

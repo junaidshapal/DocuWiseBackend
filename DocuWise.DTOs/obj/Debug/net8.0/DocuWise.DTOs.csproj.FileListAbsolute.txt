@@ -1,0 +1,12 @@
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\bin\Debug\net8.0\DocuWise.DTOs.deps.json
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\bin\Debug\net8.0\DocuWise.DTOs.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\bin\Debug\net8.0\DocuWise.DTOs.pdb
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.AssemblyInfoInputs.cache
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.AssemblyInfo.cs
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.csproj.CoreCompileInputs.cache
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\refint\DocuWise.DTOs.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.pdb
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\ref\DocuWise.DTOs.dll
+E:\AB Projects Folder\Projectas\ResumeAnalyzer\DocuWise\DocuWise.DTOs\obj\Debug\net8.0\DocuWise.DTOs.csproj.AssemblyReference.cache
