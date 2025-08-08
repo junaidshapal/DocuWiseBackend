@@ -25,13 +25,21 @@ builder.Services.AddIdentity<User, IdentityRole>()
 
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 //builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+builder.Services.AddScoped<IFavoriteService, FavoriteService>();
+builder.Services.AddScoped<IFavoriteRepository, FavoriteRepository>();
+builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "DocuWise API", Version = "v1" });
+    c.OperationFilter<SwaggerFileOperationFilter>();
+});
 
 
 
@@ -83,6 +91,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStaticFiles();
+app.UseRouting();
 
 app.UseHttpsRedirection();
 
