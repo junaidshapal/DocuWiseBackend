@@ -12,8 +12,7 @@ namespace DocuWise.Data.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime? LastLogin { get; set; }
-
-        // Navigation
+        public string? ProfilePictureUrl { get; set; }
         public ICollection<Document> Documents { get; set; }
     }
 }
