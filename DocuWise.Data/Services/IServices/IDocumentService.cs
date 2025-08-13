@@ -12,6 +12,7 @@ namespace DocuWise.Data.Services.IServices
         Task<IEnumerable<Document>> GetAllAsync();
         Task<Document?> GetByIdAsync(int id);
         Task<IEnumerable<Document>> GetByUserIdAsync(string userId);
+        Task<(string summary, string keywords, string category)> AnalyzeTextWithAI(string text);
         Task AddAsync(Document document);
         Task UpdateAsync(Document document);
         Task DeleteAsync(Document document);
