@@ -61,7 +61,6 @@ namespace DocuWise.Controllers
         //}
 
 
-
         [HttpPost("upload")]
         [Authorize]
         [Consumes("multipart/form-data")]
@@ -97,8 +96,6 @@ namespace DocuWise.Controllers
                 return Unauthorized("Invalid token: UserId not found.");
             Console.WriteLine("Extracted UserId from JWT: " + userId);
 
-
-
             var (summary, keywords, category) = await AnalyzeFileWithAI(filePath);
 
             var document = new Document
@@ -118,6 +115,33 @@ namespace DocuWise.Controllers
             return Ok(new { message = "Document uploaded", document.Id });
         }
 
+        [HttpPost("text")]
+        [Authorize]
+        public async Task<IActionResult> UploadText([FromBody] TextUploadDto dto)
+        {
+            var userId = User.FindFirst("uid")?.Value;
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("Invalid token: UserId not found.");
+
+            if (string.IsNullOrWhiteSpace(dto.Text))
+                return BadRequest("Text content is empty.");
+
+            var (summary, keywords, category) = await _documentService.AnalyzeTextWithAI(dto.Text);
+
+            var document = new Document
+            {
+                Title = string.IsNullOrWhiteSpace(dto.Title) ? "Untitled Text Submission" : dto.Title,
+                FilePath = null,
+                UploadDate = DateTime.UtcNow,
+                UserId = userId,
+                Summary = summary,
+                Keywords = keywords,
+                Category = category
+            };
+
+                await _documentService.AddAsync(document);
+            return Ok(new { message = "Text submitted successfully", document.Id });
+        }
 
         // GET: api/document/user
         [HttpGet("user")]
