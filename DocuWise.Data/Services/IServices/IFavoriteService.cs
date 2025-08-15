@@ -1,0 +1,18 @@
+﻿using DocuWise.Data.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DocuWise.Data.Services.IServices
+{
+    public interface IFavoriteService
+    {
+        Task AddFavoriteAsync(string userId, int documentId);
+        Task RemoveFavoriteAsync(string userId, int documentId);
+        Task<IEnumerable<Document>> GetFavoriteDocumentsAsync(string userId);
+        Task<bool> IsFavoriteAsync(int documentId, string userId);
+
+    }
+}
