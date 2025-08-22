@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DocuWise.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a22c580b77dc80aacd07f754d8531765aff780d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DocuWise.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DocuWise.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
