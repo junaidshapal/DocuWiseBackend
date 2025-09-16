@@ -1,13 +1,16 @@
 ﻿using DocuWise.Data.Services.IServices;
 using DocuWise.DTOs.DTOs.Profile;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace DocuWise.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] // ← require an authenticated user
     public class UserProfileController : ControllerBase
     {
         private readonly IUserProfileService _userProfileService;
@@ -15,12 +18,21 @@ namespace DocuWise.Controllers
         {
             _userProfileService = userProfileService;
         }
-
+        
         [HttpGet]
         public async Task<IActionResult> GetProfile()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userId =
+                User.FindFirstValue(ClaimTypes.NameIdentifier) ??
+                User.FindFirstValue(JwtRegisteredClaimNames.Sub) ??
+                User.FindFirst("uid")?.Value;
+
+            if (string.IsNullOrWhiteSpace(userId))
+                return Unauthorized("Missing user id claim.");
+
             var profile = await _userProfileService.GetProfileAsync(userId);
+            if (profile is null) return NotFound();
+
             return Ok(profile);
         }
 
