@@ -19,9 +19,13 @@ namespace DocuWise.Data.Services
             _repository = repository;
         }
 
-        public async Task<UserProfileDTO> GetProfileAsync(string userId)
+        public async Task<UserProfileDTO?> GetProfileAsync(string userId)
         {
+            if (string.IsNullOrWhiteSpace(userId)) return null;
+
             var user = await _repository.GetByIdAsync(userId);
+            if (user is null) return null;
+
             return new UserProfileDTO
             {
                 FirstName = user.FirstName,
@@ -31,6 +35,7 @@ namespace DocuWise.Data.Services
                 ProfilePictureUrl = user.ProfilePictureUrl
             };
         }
+
 
         public async Task<bool> UpdateProfileAsync(string userId, UpdateProfileDTO dto)
         {
