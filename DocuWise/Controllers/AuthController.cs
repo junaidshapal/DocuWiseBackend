@@ -24,6 +24,23 @@ namespace DocuWise.Controllers
         }
 
         [HttpPost("register")]
+        public async Task<IActionResult> Register(RegisterDto dto)
+        {
+            var user = new User
+            {
+                UserName = dto.Email,
+                Email = dto.Email,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                LastLogin = null
+            };
+
+            var result = await _userManager.CreateAsync(user, dto.Password);
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Ok(new { message = "Registration successful" });
+        }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)
