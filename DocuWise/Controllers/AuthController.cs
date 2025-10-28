@@ -59,13 +59,6 @@ namespace DocuWise.Controllers
 
         private async Task<string> GenerateJwtToken(User user)
         {
-            var claims = new List<Claim>
-{
-    new Claim(ClaimTypes.NameIdentifier, user.Id),     // nameid
-    new Claim(JwtRegisteredClaimNames.Sub, user.Id),   // sub (fallback)
-    new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
-    new Claim("uid", user.Id)
-};
 
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JwtSettings:Secret"]));
