@@ -17,6 +17,8 @@ namespace DocuWise.Data.Repositories
             _context = context;
         }
 
+        
+        //Gett all docs
         public async Task<IEnumerable<Document>> GetAllDocumentsAsync()
         {
             return await _context.Documents.ToListAsync();
