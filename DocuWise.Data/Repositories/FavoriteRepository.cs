@@ -19,6 +19,7 @@ namespace DocuWise.Data.Repositories
             _context = context;
         }
 
+        //addd to favirote method in repository
         public async Task AddFavoriteAsync(Favorite favorite)
         {
             _context.Favorites.Add(favorite);
