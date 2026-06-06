@@ -19,7 +19,7 @@ namespace DocuWise.Data.Repositories
             _userManager = userManager;
         }
 
-        //Get user by id
+        //Get user by id async method
         public async Task<User> GetByIdAsync(string userId)
         {
             return await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
